@@ -1,33 +1,51 @@
+$torch-red: #FF1F1F;
+$color-border: $torch-red;
+$border-radius: 5px;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 .App {
   text-align: center;
+  margin-top: 100px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+.search_container {
+  max-width: 950px;
+  width: 100%;
+  height: 35px;
+  margin: 0 auto;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  input {
+    width: 90%;
+    margin-right: 5px;
+    height: 100%;
+    border-radius: $border-radius;
+    border: 2px solid $color-border;
+    padding: 5px;
+  
+    &:focus {
+        border: 2px solid darken($color-border, 20%);
+        outline: none;
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    height: 100%;
+    border-radius: $border-radius;
+    background-color: transparent;
+    border: 2px solid $color-border;
+    padding: 5px;
+
+    &:hover {
+      background-color: $color-border;
+      color: #fff;
+    }
   }
 }
