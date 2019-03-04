@@ -19,7 +19,7 @@ class Book extends Component {
           <div className='image_placeholder'></div>
           <div className='content_placeholder'>
             <div className='title'>{book.volumeInfo.title}</div>
-            <div className='author'>By: {book.volumeInfo.authors ? book.volumeInfo.authors[0] : null}</div>
+            <div className='author'>By: {book.volumeInfo.authors ? book.volumeInfo.authors.map(author => author).join(', ') : null}</div>
             <div className='publisher'>Published By: {book.volumeInfo.publisher ? book.volumeInfo.publisher : null}</div>
             <a href={book.volumeInfo.infoLink} target='_'>See this Book</a>
           </div>
